@@ -26,7 +26,7 @@ public class ExcelHeaderImplementation {
 		String fileDirectory = System.getProperty("user.dir")+
 				"\\resources\\excelFiles\\"+"fileName"+".xlsx";
 		System.out.println("User Directory: "+ fileDirectory);
-		
+		System.out.println(System.getProperty("java.class.path"));
 		
 	}
 	
