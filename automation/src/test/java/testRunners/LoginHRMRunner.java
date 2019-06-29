@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 //		        features="C:\\Users\\sivaa\\workspace\\automation\\resources\\features\\ContactUs.feature",
 //				features = {"classpath:features"}, 
-		features="C:\\Users\\sivaa\\workspace\\automation\\resources\\features\\excel.feature",
+		features="C:\\Users\\sivaa\\git\\ExcelPrograms\\automation\\resources\\features\\excel.feature",
 		
 //				tags={"@ScenarioLevelTag1"},
 				monochrome = true,

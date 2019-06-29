@@ -21,7 +21,7 @@ public class FacebookPageImpl {
 	{
 		System.setProperty("webdriver.chrome.driver", "c:\\selenium\\chromedriver.exe");
 		FacebookPageImpl impl = new FacebookPageImpl();
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = (WebDriver) new ChromeDriver();
 		//driver = new ChromeDriver();
 		driver.get("https://www.google.com");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
