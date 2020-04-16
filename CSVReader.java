@@ -93,7 +93,7 @@ public class CSVReader {
 		String[] tnonHeaders;
 		while(((sline = br1.readLine()) != null) && ((tline = br2.readLine()) != null)){
 		
-		System.out.println(sline + "\t" + tline);
+		//System.out.println(sline + "\t" + tline);
 		if(rowNum == 0){
 		sheaders = sline.split(",");
 		theaders = tline.split(",");
@@ -110,16 +110,17 @@ public class CSVReader {
 		}
 		System.out.println(StringUtils.repeat("*", 100));
 		
-		System.out.println(StringUtils.repeat("=", 30)+"HEADER INFORMATION"+StringUtils.repeat("=", 30));
+		System.out.println(StringUtils.repeat("=", 30)+"HEADER INFORMATION"+StringUtils.repeat("=", 36));
 		System.out.println("Number of Source File Headers: "+sheaders.length);
 		System.out.println("Number of Target File Headers: "+theaders.length);
-		System.out.printf("%25s %50s" ,"Source File Headers","Target File Headers");
-			
-		System.out.println();
+		System.out.println(StringUtils.repeat("-", 85));
+		System.out.printf("%25s %15s %20s" ,"Source File Headers","|","Target File Headers");
 		
+		System.out.println();
+		System.out.println(StringUtils.repeat("-", 85));
 		
 		for(int i=0; i<sheaders.length; i++){
-			System.out.format("%25s %50s\n", sheaders[i], theaders[i]);
+			System.out.format("%25s %15s %20s\n", sheaders[i], "|", theaders[i]);
 		}
 		
 		
@@ -135,7 +136,10 @@ public class CSVReader {
 	
 	public static void main(String[] args) throws IOException{
 		
-		CSVReader read = new CSVReader("C:\\Source\\bookmonth.csv", "C:\\Source\\bookmonth.csv");
+		//"C:\\Source\\bookmonth.csv"
+		//C:\\Users\\sivaa\\Downloads\\1000000 Sales Records\\1000000 Sales Records.csv
+		
+		CSVReader read = new CSVReader("C:\\Users\\sivaa\\Downloads\\1000000 Sales Records\\1000000 Sales Records.csv", "C:\\Users\\sivaa\\Downloads\\1000000 Sales Records\\1000000 Sales Records.csv");
 		read.readTwoCSVs();
 		
 	}
